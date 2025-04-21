@@ -1,2 +1,2 @@
-# GRIMFORGE
+# Ancient race
 RimWorld - Ancient race
