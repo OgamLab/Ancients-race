@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Ancients race</name>
+	<author>GRIMFORGETeam/Ogam/ᗣᗰᘜᖘᗝᙐᑌᖆ/Mortis</author>
+	<supportedVersions>
+		<li>1.5</li>
+	</supportedVersions>
+	<packageId>Grimforge_team_ancients</packageId>
+	<description>A new unique race, with it’s own faction. Using gear from ancient weaponry. They are powerful, and should be feared whenever they appear.</description>
+	<modDependencies>
+		<li>
+			<packageId>RavenousEye.AncientEquipment</packageId>
+			<displayName>Ancient Weaponry</displayName>
+		</li>
+	</modDependencies>
+	<loadAfter>
+		<li>Ludeon.RimWorld</li>
+    <li>RavenousEye.AncientEquipment</li>
+	</loadAfter>
+</ModMetaData>
