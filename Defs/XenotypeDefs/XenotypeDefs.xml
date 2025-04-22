@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	  <XenotypeDef>
+    <defName>GRIMFORGE_Ancients</defName>
+    <label>Ancients</label>
+    <description></description>
+    <descriptionShort></descriptionShort>
+    <iconPath>UI/Icons/Xenotypes/Ancients</iconPath>
+    <combatPowerFactor>1.5</combatPowerFactor>
+    <genes>
+      <li>PerfectImmunity</li>
+			<li>PsychicAbility_Extreme</li>
+			<li>awful social</li>
+			<li>Aggression_Aggressive</li>
+    </genes>
+  </XenotypeDef>
+</Defs>
