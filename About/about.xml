@@ -15,6 +15,6 @@
 	</modDependencies>
 	<loadAfter>
 		<li>Ludeon.RimWorld</li>
-    <li>RavenousEye.AncientEquipment</li>
+    		<li>RavenousEye.AncientEquipment</li>
 	</loadAfter>
 </ModMetaData>
