@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationRemove">
+				<xpath>Defs/PawnKindDef[defaultFactionType="GFAncients"]/weaponTags</xpath>
+			</li>
+			<li Class="PatchOperationRemove">
+				<xpath>Defs/PawnKindDef[defaultFactionType="GFAncients"]/apparelRequired</xpath>
+			</li>
+		</operations>
+	</Operation>
+	
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationRemove">
+				<xpath>Defs/PawnKindDef[defName="GFSoldier"]/weaponTags</xpath>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/PawnKindDef[defName="GFSoldier"]</xpath>
+				<value>
+					<weaponTags>
+						<li>REAWGun</li>
+					</weaponTags>
+						<apparelRequired>
+						<li>REAW_AncientCombatArmor</li>
+						<li>REAW_AncientCombatHelmet</li>
+					</apparelRequired>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationRemove">
+				<xpath>Defs/PawnKindDef[defName="GFWarrior"]/weaponTags</xpath>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/PawnKindDef[defName="GFWarrior"]</xpath>
+				<value>
+					<weaponTags>
+						<li>REAWMelee</li>
+					</weaponTags>
+					<apparelRequired>
+						<li>REAW_AncientStrikerArmor</li>
+						<li>REAW_AncientStrikerHelmet</li>
+					</apparelRequired>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationRemove">
+				<xpath>Defs/PawnKindDef[defName="GFMarauder"]/weaponTags</xpath>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/PawnKindDef[defName="GFMarauder"]</xpath>
+				<value>
+					<weaponTags>
+						<li>REAWWeapon</li>
+					</weaponTags>
+					<apparelTags>
+						<li>REAWArmor</li>
+					</apparelTags>
+					<specificApparelRequirements>
+						<li>
+							<bodyPartGroup>FullHead</bodyPartGroup>
+							<requiredTag>REAWArmor</requiredTag>
+						</li>
+						<li>
+							<bodyPartGroup>Torso</bodyPartGroup>
+						</li>
+					</specificApparelRequirements>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+</Patch>

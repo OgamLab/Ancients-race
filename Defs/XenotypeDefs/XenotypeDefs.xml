@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	  <XenotypeDef>
-    <defName>GRIMFORGE_Ancients</defName>
+	<XenotypeDef>
+    <defName>GFAncientXenotype</defName>
     <label>Ancients</label>
-    <description></description>
+    <description>An unknown ancient race with incredible mental abilities</description>
     <descriptionShort></descriptionShort>
     <iconPath>UI/Icons/Xenotypes/Ancients</iconPath>
     <combatPowerFactor>1.5</combatPowerFactor>
     <genes>
+			<li>GF_AncientWings</li>
       <li>PerfectImmunity</li>
 			<li>PsychicAbility_Extreme</li>
-			<li>awful social</li>
+			<li>AptitudeTerrible_Social</li>
 			<li>Aggression_Aggressive</li>
     </genes>
   </XenotypeDef>

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<SoundDef>
+		<defName>Pawn_Vehicle_Death</defName>  
+		<context>MapOnly</context>  
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>Pawn/Vehicle/VehicleDeath</clipPath>
+					</li>
+				</grains>      
+				<volumeRange>20~20</volumeRange>      
+				<pitchRange>0.9311765~1.045882</pitchRange>      
+				<sustainLoop>False</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<SoundDef>
+		<defName>Pawn_Engine_Rev</defName>  
+		<context>MapOnly</context>  
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>Pawn/Vehicle/EngineRev</clipPath>
+					</li>
+				</grains>      
+				<volumeRange>20~20</volumeRange>      
+				<pitchRange>0.9311765~1.045882</pitchRange>      
+				<sustainLoop>False</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+</Defs>

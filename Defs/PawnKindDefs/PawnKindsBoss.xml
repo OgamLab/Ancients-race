@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<PawnKindDef Abstract="True">
+		<defName>GFAncientBoss</defName>
+		<label>Ancient boss</label>
+		<race>Human</race>
+		<defaultFactionType>GFAncients</defaultFactionType>
+		<chemicalAddictionChance>0.7</chemicalAddictionChance>
+		<backstoryCryptosleepCommonality>0.4</backstoryCryptosleepCommonality>
+		<invNutrition>2.55</invNutrition>
+		<biocodeWeaponChance>1</biocodeWeaponChance>
+		<maxGenerationAge>55</maxGenerationAge>
+		<gearHealthRange>1~2.3</gearHealthRange>
+		<techHediffsMoney>3400~9999</techHediffsMoney>
+		<techHediffsRequired>
+      <li>DeathAcidifier</li>
+    </techHediffsRequired>
+		<disallowedTraits>
+      <li>Brawler</li>
+    </disallowedTraits>
+		<inventoryOptions>
+			<skipChance>0.4</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>Silver</thingDef>
+					<countRange>250~1000</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+		<combatPower>400</combatPower>
+		<apparelMoney>9000~99999</apparelMoney>
+		<weaponTags>
+      <li>SpacerGun</li>
+		</weaponTags>
+		<apparelRequired>
+      <li>Apparel_ArmorHelmetCataphract</li>
+      <li>Apparel_ArmorCataphract</li>
+    </apparelRequired>
+    <specificApparelRequirements Inherit="False">
+      <li>
+        <bodyPartGroup>UpperHead</bodyPartGroup>
+        <alternateTagChoices>
+          <li>
+            <tag>Gunlink</tag>
+            <chance>0.2</chance>
+          </li>
+        </alternateTagChoices>
+      </li>
+      <li>
+        <bodyPartGroup>Torso</bodyPartGroup>
+        <apparelLayer>OnSkin</apparelLayer>
+        <stuff>Synthread</stuff>
+      </li>
+      <li>
+        <bodyPartGroup>Legs</bodyPartGroup>
+        <apparelLayer>OnSkin</apparelLayer>
+        <stuff>Synthread</stuff>
+      </li>
+    </specificApparelRequirements>
+		<initialWillRange>10</initialWillRange>
+		<initialResistanceRange>45~80</initialResistanceRange>
+		<xenotypeSet>
+      <xenotypeChances>
+        <GFAncientXenotype>999</GFAncientXenotype>
+      </xenotypeChances>
+    </xenotypeSet>
+	</PawnKindDef>
+
+</Defs>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<FactionDef ParentName="FactionBase" Abstract="True" Name="AncientsBase">
+    <pawnSingular>ancient</pawnSingular>
+    <pawnsPlural>ancients</pawnsPlural>
+    <categoryTag>Ancient</categoryTag>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
+    <configurationListOrderPriority>2000</configurationListOrderPriority>
+    <displayInFactionSelection>false</displayInFactionSelection>
+    <fixedName>Ancients</fixedName>
+    <factionIconPath>World/WorldObjects/Expanding/Sites/DownedRefugee</factionIconPath> <!-- -->
+    <techLevel>Ultra</techLevel>
+    <xenotypeSet Inherit="False">
+      <xenotypeChances>
+        <GFAncientXenotype>999</GFAncientXenotype>
+      </xenotypeChances>
+    </xenotypeSet>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Offworld</li>
+          <li>Outlander</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+    <hidden>true</hidden>
+    <rescueesCanJoin>true</rescueesCanJoin>
+    <autoFlee>false</autoFlee>
+		<disallowedMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
+    </disallowedMemes>
+		<disallowedPrecepts>
+      <li MayRequire="Ludeon.RimWorld.Ideology">ApparelDesired_Strong_Subordinate</li> <!-- Never generate with any apparel precepts -->
+      <li MayRequire="Ludeon.RimWorld.Ideology">ApparelDesired_Soft_Subordinate</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Male_Mandatory</li> <!-- Never generate nudity precepts -->
+      <li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Female_Mandatory</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Male_CoveringAnythingButGroinDisapproved</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Female_CoveringAnythingButGroinDisapproved</li>
+    </disallowedPrecepts>
+    <requiredMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Structure_Archist</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Transhumanist</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">HumanPrimacy</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Loyalist</li>
+    </requiredMemes>
+  </FactionDef>
+
+<!--
+  <FactionDef ParentName="AncientsBase">
+    <defName>GFAncient</defName>
+    <label>neutral ancients</label>
+  </FactionDef>
+-->
+
+  <FactionDef ParentName="AncientsBase">
+    <defName>GFAncients</defName>
+    <label>hostile ancients</label>
+    <permanentEnemy>true</permanentEnemy>
+  </FactionDef>
+</Defs>

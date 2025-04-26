@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<GeneCategoryDef>
+		<defName>GF_Wings</defName>
+		<label>functional wings</label>
+		<displayPriorityInXenotype>315.70</displayPriorityInXenotype>
+		<displayPriorityInGenepack>-110.70</displayPriorityInGenepack>
+	</GeneCategoryDef>
+</Defs>

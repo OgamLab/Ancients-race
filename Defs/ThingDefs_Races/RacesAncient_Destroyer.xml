@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="BasePawn" Name="AncientBaseVehicle" Abstract="True">
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		<statBases>
+			<ToxicResistance>1</ToxicResistance>
+			<Flammability>0</Flammability>
+			<ComfyTemperatureMin>-1000</ComfyTemperatureMin>
+			<ComfyTemperatureMax>1000</ComfyTemperatureMax>
+			<MeatAmount>0</MeatAmount>
+			<ArmorRating_Heat>2.00</ArmorRating_Heat>
+		</statBases>
+		<tradeability>None</tradeability>
+		<race>
+			<fleshType>Mechanoid</fleshType>
+			<needsRest>false</needsRest>
+			<hasGenders>false</hasGenders>
+			<foodType>None</foodType>
+			<lifeExpectancy>2500</lifeExpectancy>
+			<bloodDef>Filth_MachineBits</bloodDef>
+			<soundCallIntervalRange>1000~2000</soundCallIntervalRange>
+			<soundCallIntervalFriendlyFactor>2</soundCallIntervalFriendlyFactor>
+		</race>
+	</ThingDef>
+
+	<!-- Tank -->
+
+	<ThingDef ParentName="AncientBaseVehicle">
+		<defName>Race_GFAncientDestroyer</defName>
+		<label>Ancient destroyer</label>
+		<description>The ancients latest creation. This war machine is made to destroy anything in it’s path. It has a deadly double action cannon, and close range machine gun.</description>
+		<statBases>
+			<MoveSpeed>5</MoveSpeed>
+			<ArmorRating_Blunt>1.5</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.8</ArmorRating_Sharp>
+		</statBases>
+		<tools>
+			<li>
+				<label>front plate</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>17</power>
+				<cooldownTime>3.6</cooldownTime>
+				<linkedBodyPartsGroup>DestroyerFrontPlate</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			</li>
+		</tools>
+		<race>
+			<intelligence>ToolUser</intelligence>
+			<thinkTreeMain>GFAncientDestroyerTree</thinkTreeMain>
+			<body>AncientDestroyerChassis</body>
+			<baseBodySize>3.0</baseBodySize>
+			<baseHealthScale>8.0</baseHealthScale>
+			<lifeStageAges>
+				<li>
+					<def>GFAncientDestroyerFullyFormed</def>
+					<minAge>0</minAge>
+					<soundWounded>Pawn_Mech_Termite_Wounded</soundWounded>
+					<soundDeath>Pawn_Mech_Termite_Death</soundDeath>
+					<soundCall>Pawn_Mech_Termite_Call</soundCall>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_MechanoidBash_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_MechanoidBash_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_MechanoidBash_Miss</soundMeleeMiss>
+		</race>
+		<comps>
+			<li Class="CompProperties_Explosive">
+				<wickTicks>0</wickTicks>
+				<explosiveRadius>4.9</explosiveRadius>
+				<explodeOnKilled>true</explodeOnKilled>
+				<explosiveDamageType>Bomb</explosiveDamageType>
+				<propagationSpeed>0.5</propagationSpeed>
+				<chanceNeverExplodeFromDamage>1</chanceNeverExplodeFromDamage>
+			</li>
+			<li Class="CompProperties_TargetingBeam" />
+			<li Class="CompProperties_TurretGun">
+				<turretDef>Gun_GFAncientDestroyerTurret</turretDef>
+				<angleOffset>-90</angleOffset>
+				<renderNodeProperties>
+					<li>
+						<nodeClass>PawnRenderNode_TurretGun</nodeClass>
+						<workerClass>PawnRenderNodeWorker_TurretGun</workerClass>
+						<parentTagDef>Body</parentTagDef>
+						<overrideMeshSize>(4,4)</overrideMeshSize>
+						<baseLayer>20</baseLayer>
+						<pawnType>Any</pawnType>
+						<drawData>
+							<!-- <dataNorth> -->
+								<!-- <offset>(-0.31,0,0)</offset> -->
+							<!-- </dataNorth> -->
+							<!-- <dataEast> -->
+								<!-- <offset>(0,0,0.31)</offset> -->
+							<!-- </dataEast> -->
+							<!-- <dataSouth> -->
+								<!-- <offset>(0.31,0,0)</offset> -->
+							<!-- </dataSouth> -->
+							<!-- <dataWest> -->
+								<!-- <offset>(0,0,0.31)</offset> -->
+								<!-- <rotationOffset>180</rotationOffset> -->
+							<!-- </dataWest> -->
+							<dataWest>
+								<rotationOffset>180</rotationOffset>
+							</dataWest>
+						</drawData>
+					</li>
+				</renderNodeProperties>
+			</li>
+		</comps>
+		<butcherProducts>
+			<Steel>100</Steel>
+			<Plasteel>40</Plasteel>
+			<Uranium>10</Uranium>
+		</butcherProducts>
+	</ThingDef>
+	<LifeStageDef>
+		<defName>GFAncientDestroyerFullyFormed</defName>
+		<label>fully-formed</label>
+		<visible>false</visible>
+	</LifeStageDef>
+
+	<PawnKindDef>
+		<defName>GFAncientDestroyer</defName>
+		<label>Ancient MBT</label>
+		<race>Race_GFAncientDestroyer</race>
+		<combatPower>400</combatPower>
+		<defaultFactionType>GFAncients</defaultFactionType> <!-- Change Faction -->
+		<aiAvoidCover>true</aiAvoidCover>
+		<destroyGearOnDrop>true</destroyGearOnDrop>
+		<allowInMechClusters>false</allowInMechClusters>
+		<canStrip>false</canStrip>
+		<minGenerationAge>200</minGenerationAge>
+		<forceNormalGearQuality>true</forceNormalGearQuality>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Vehicle/AncientDestroyer</texPath> <!-- -->
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>(5,5)</drawSize>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponMoney>9999~9999</weaponMoney>
+		<weaponTags>
+			<li>GFAncientDestroyerGun</li>
+		</weaponTags>
+	</PawnKindDef>
+
+	<!-- tank turret -->
+
+	<ThingDef ParentName="BaseWeapon">
+		<defName>Gun_GFAncientDestroyerTurret</defName>
+		<label>destroyer turret</label>
+		<graphicData>
+			<texPath>Things/Pawn/Vehicle/AncientDestroyerGun</texPath> <!-- -->
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(4,4)</drawSize>
+		</graphicData>
+		<!-- <equippedAngleOffset>0</equippedAngleOffset> -->
+		<!-- <equippedDistanceOffset>0</equippedDistanceOffset> -->
+		<statBases>
+			<MarketValue>1400</MarketValue>
+			<AccuracyTouch>0.79</AccuracyTouch>
+			<AccuracyShort>0.42</AccuracyShort>
+			<AccuracyMedium>0.18</AccuracyMedium>
+			<AccuracyLong>0.06</AccuracyLong>
+			<RangedWeapon_Cooldown>2.0</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>5</Mass>
+			<Flammability>0</Flammability>
+		</statBases>
+		<recoilPower>3</recoilPower>
+		<tradeability>None</tradeability>
+		<techLevel>Ultra</techLevel>
+		<destroyOnDrop>true</destroyOnDrop>
+		<weaponTags Inherit="False">
+			<li>GFAncientDestroyer</li>
+		</weaponTags>
+		<verbs>
+			<li>
+				<defaultProjectile>Bullet_GFAncientDestroyerShell</defaultProjectile>
+				<verbClass>Verb_Shoot</verbClass>
+				<forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+				<forcedMissRadiusClassicMortars>13</forcedMissRadiusClassicMortars>
+				<muzzleFlashScale>16</muzzleFlashScale>
+				<requireLineOfSight>false</requireLineOfSight>
+				<isMortar>false</isMortar>
+				<forcedMissRadius>3.5</forcedMissRadius>
+				<ai_AvoidFriendlyFireRadius>3</ai_AvoidFriendlyFireRadius>
+				<defaultCooldownTime>6</defaultCooldownTime>
+				<minRange>15</minRange>
+				<range>60</range>
+				<burstShotCount>2</burstShotCount>
+				<soundCast>DCannon</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<linkedBodyPartsGroup>AncientDestroyerTurretGroup</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			</li>
+		</verbs>
+	</ThingDef>
+	<ThingDef>
+		<defName>Bullet_GFAncientDestroyerShell</defName>
+		<label>explosive mortar shell</label>
+		<graphicData>
+			<texPath>Things/Projectile/ShellHighExplosive</texPath> <!-- -->
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<thingClass>Projectile_Explosive</thingClass>
+		<projectile>
+			<damageDef>Bomb</damageDef>
+			<flyOverhead>true</flyOverhead>
+			<soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+			<soundExplode>MortarBomb_Explode</soundExplode>
+			<soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+			<soundAmbient>MortarRound_Ambient</soundAmbient>
+			<damageAmountBase>15</damageAmountBase>
+			<speed>80</speed>
+			<explosionRadius>2</explosionRadius>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseGun">
+		<defName>Gun_GFAncientDestroyer</defName>
+		<label>Ancient Defense Destroyer machinegun</label>
+		<description>Ancient destroyer machinegun.</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/OrionCorp/AncientDestroyerMachineGun</texPath> <!-- -->
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<smeltable>false</smeltable>
+		<tradeability>None</tradeability>
+		<techLevel>Ultra</techLevel>
+		<destroyOnDrop>true</destroyOnDrop>
+		<weaponTags Inherit="False">
+			<li>GFAncientDestroyerGun</li>
+		</weaponTags>
+		<equippedAngleOffset>0</equippedAngleOffset>
+		<equippedDistanceOffset>0</equippedDistanceOffset>
+		<soundInteract>Interact_ChargeRifle</soundInteract>
+		<tradeTags>
+			<li>WeaponRanged</li>
+		</tradeTags>
+		<weaponClasses>
+			<li>RangedLight</li>
+		</weaponClasses>
+		<tools>
+			<li>
+				<label>stock</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<statBases>
+			<Mass>3</Mass>
+			<MarketValue>800</MarketValue>
+			<AccuracyTouch>0.95</AccuracyTouch>
+			<AccuracyShort>0.80</AccuracyShort>
+			<AccuracyMedium>0.60</AccuracyMedium>
+			<AccuracyLong>0.10</AccuracyLong>
+			<RangedWeapon_Cooldown>0.40</RangedWeapon_Cooldown>
+		</statBases>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_GFAncientDestroyerMachineGun</defaultProjectile>
+				<warmupTime>0.8</warmupTime>
+				<range>15</range>
+				<ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+				<burstShotCount>4</burstShotCount>
+				<soundCast>GFAncientDestroyerMachineGun</soundCast>
+				<soundCastTail>GunTail_Light</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+	</ThingDef>
+
+	  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_GFAncientDestroyerMachineGun</defName>
+    <label>machinegun bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_big</texPath> <!-- -->
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>8</damageAmountBase>
+      <speed>120</speed>
+    </projectile>
+  </ThingDef>
+</Defs>

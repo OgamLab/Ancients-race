@@ -5,16 +5,18 @@
 	<supportedVersions>
 		<li>1.5</li>
 	</supportedVersions>
-	<packageId>Grimforge_team_ancients</packageId>
-	<description>A new unique race, with it’s own faction. Using gear from ancient weaponry. They are powerful, and should be feared whenever they appear.</description>
+	<packageId>GrimforgeTeam.Ancients</packageId>
+	<description>Description: A new unique race, with it’s own faction. Using gear from ancient weaponry. They are powerful, and should be feared whenever they appear.</description>
+	<url>https://github.com/TheMXA/Ancients-race/tree/main</url>
 	<modDependencies>
 		<li>
 			<packageId>RavenousEye.AncientEquipment</packageId>
 			<displayName>Ancient Weaponry</displayName>
+			<downloadUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=3466124052</downloadUrl>
 		</li>
 	</modDependencies>
 	<loadAfter>
 		<li>Ludeon.RimWorld</li>
-    		<li>RavenousEye.AncientEquipment</li>
+    <li>RavenousEye.AncientEquipment</li>
 	</loadAfter>
 </ModMetaData>
