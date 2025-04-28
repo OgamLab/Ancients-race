@@ -164,7 +164,6 @@
 		<!-- <equippedAngleOffset>0</equippedAngleOffset> -->
 		<!-- <equippedDistanceOffset>0</equippedDistanceOffset> -->
 		<statBases>
-			<MarketValue>1400</MarketValue>
 			<AccuracyTouch>0.79</AccuracyTouch>
 			<AccuracyShort>0.42</AccuracyShort>
 			<AccuracyMedium>0.18</AccuracyMedium>

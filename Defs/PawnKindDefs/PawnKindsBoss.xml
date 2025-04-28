@@ -5,13 +5,16 @@
 		<label>Ancient boss</label>
 		<race>Human</race>
 		<defaultFactionType>GFAncients</defaultFactionType>
-		<chemicalAddictionChance>0.7</chemicalAddictionChance>
 		<backstoryCryptosleepCommonality>0.4</backstoryCryptosleepCommonality>
 		<invNutrition>2.55</invNutrition>
 		<biocodeWeaponChance>1</biocodeWeaponChance>
 		<maxGenerationAge>55</maxGenerationAge>
+		<chemicalAddictionChance>0.1</chemicalAddictionChance>
+		<combatEnhancingDrugsChance>0.15</combatEnhancingDrugsChance>
+    <combatEnhancingDrugsCount>0~2</combatEnhancingDrugsCount>
 		<gearHealthRange>1~2.3</gearHealthRange>
-		<techHediffsMoney>3400~9999</techHediffsMoney>
+		<techHediffsChance>0.8</techHediffsChance>
+    <apparelColor>(90,98,113)</apparelColor>
 		<techHediffsRequired>
       <li>DeathAcidifier</li>
     </techHediffsRequired>
@@ -65,5 +68,4 @@
       </xenotypeChances>
     </xenotypeSet>
 	</PawnKindDef>
-
 </Defs>

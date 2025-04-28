@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<GeneDef ParentName="GeneBodyBase">
+    <defName>GF_AncientBody</defName>
+    <label>ancient body</label>
+    <description>The secrets of longevity and extraordinary regeneration are etched into this individual’s cells. Wounds close before your very eyes, as if time is reversing their effects.</description>
+    <iconPath>UI/Icons/Genes/Gene_ElongatedFingers</iconPath> <!-- -->
+    <displayCategory>GF_Ancient</displayCategory>
+    <displayOrderInCategory>321</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>-1</biostatMet>
+    <statOffsets>
+			<InjuryHealingFactor>10</InjuryHealingFactor>
+		</statOffsets>
+    <symbolPack>
+      <prefixSymbols>
+        <li><symbol>body</symbol></li>
+        <li><symbol>regeneration</symbol></li>
+      </prefixSymbols>
+    </symbolPack>
+		<graphicData>
+			<graphicPath>Things/Pawn/Humanlike/BodyAttachments/AG_RainbowWings/AG_RainbowWings</graphicPath> <!-- -->
+			<drawScale>2</drawScale>
+			<drawOffsetNorth>(0, 0.19, 0)</drawOffsetNorth>
+			<drawOffsetSouth>(0, 0, 0)</drawOffsetSouth>
+			<drawOffsetEast>(0, 0, 0)</drawOffsetEast>
+		</graphicData>
+  </GeneDef>
+
+	<GeneDef ParentName="GeneEarsBase">
+    <defName>GF_AncientHead</defName>
+    <label>ancient head</label>
+    <description>This individual’s head holds a secret, bestowing vision beyond the capabilities of ordinary humans. Their sight is razor sharp in daylight, and they possess an eerie ability to navigate even the blackest night, raising questions about the nature of their existence.</description>
+    <iconPath>UI/Icons/Genes/Gene_ElongatedFingers</iconPath> <!-- -->
+    <displayOrderInCategory>322</displayOrderInCategory>
+    <displayCategory>GF_Ancient</displayCategory>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>-1</biostatMet>
+    <ignoreDarkness>true</ignoreDarkness>
+    <capMods>
+      <li>
+				<capacity>Sight</capacity>
+				<offset>0.10</offset>
+			</li>
+    </capMods>
+    <symbolPack>
+      <prefixSymbols>
+        <li><symbol>head</symbol></li>
+        <li><symbol>years</symbol></li>
+      </prefixSymbols>
+    </symbolPack>
+		<graphicData>
+			<graphicPath>Things/Pawn/Humanlike/BodyAttachments/AG_RainbowWings/AG_RainbowWings</graphicPath> <!-- -->
+			<drawScale>2</drawScale>
+			<drawOffsetNorth>(0, 0.19, 0)</drawOffsetNorth>
+			<drawOffsetSouth>(0, 0, 0)</drawOffsetSouth>
+			<drawOffsetEast>(0, 0, 0)</drawOffsetEast>
+		</graphicData>
+  </GeneDef>
+
+	<GeneDef>
+    <defName>GF_AncientWings</defName>
+    <label>ancient wings</label>
+    <description>Carriers of this gene have a pair of giant wings sprouting from their back.</description>
+    <iconPath>UI/Icons/Genes/Gene_LongJumpLegs</iconPath> <!-- -->
+    <displayCategory>GF_Ancient</displayCategory>
+		<biostatCpx>1</biostatCpx>
+    <abilities>
+      <li>GF_WingPoweredJump</li>
+    </abilities>
+    <descriptionHyperlinks>
+      <AbilityDef>GF_WingPoweredJump</AbilityDef>
+    </descriptionHyperlinks>
+    <biostatMet>-1</biostatMet>
+		<selectionWeight>0</selectionWeight>
+    <symbolPack>
+      <prefixSymbols>
+        <li><symbol>wing</symbol></li>
+        <li><symbol>fly</symbol></li>
+      </prefixSymbols>
+    </symbolPack>
+		<graphicData>
+			<graphicPath>Things/Pawn/Humanlike/BodyAttachments/AG_RainbowWings/AG_RainbowWings</graphicPath> <!-- -->
+			<drawScale>2</drawScale>
+			<drawOffsetNorth>(0, 0.19, 0)</drawOffsetNorth>
+			<drawOffsetSouth>(0, 0, 0)</drawOffsetSouth>
+			<drawOffsetEast>(0, 0, 0)</drawOffsetEast>
+		</graphicData>
+		<exclusionTags>
+			<li>Wing</li>
+			<li>Wings</li>
+		</exclusionTags>
+  </GeneDef>
+</Defs>

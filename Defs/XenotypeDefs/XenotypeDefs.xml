@@ -8,11 +8,15 @@
     <iconPath>UI/Icons/Xenotypes/Ancients</iconPath>
     <combatPowerFactor>1.5</combatPowerFactor>
     <genes>
+			<li>GF_AncientBody</li>
+			<li>GF_AncientHead</li>
 			<li>GF_AncientWings</li>
       <li>PerfectImmunity</li>
 			<li>PsychicAbility_Extreme</li>
 			<li>AptitudeTerrible_Social</li>
-			<li>Aggression_Aggressive</li>
+			<li>AptitudeTerrible_Animals</li>
+			<li>Aggression_HyperAggressive</li>
+			<li>Sterile</li>
     </genes>
   </XenotypeDef>
 </Defs>

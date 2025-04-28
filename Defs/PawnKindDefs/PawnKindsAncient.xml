@@ -85,7 +85,7 @@
 		<label>Ancient Warrior</label>
 		<combatPower>140</combatPower>
     <weaponMoney>2000~3500</weaponMoney>
-		<skills>	
+		<skills>
 			<li>
         <skill>Melee</skill>
         <range>6~20</range>
