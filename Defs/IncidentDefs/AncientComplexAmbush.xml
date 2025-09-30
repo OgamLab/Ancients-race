@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!--
+	<IncidentDef>
+			<defName>AncientComplexAmbush</defName>
+			<label>Засада в Ancient Complex</label>
+			<workerClass>GFAncients.Events.Common.IncidentWorker_AncientComplexAmbush</workerClass>
+			<category>ThreatSmall</category>
+			<targetTags>
+					<li>Map</li>
+			</targetTags>
+			<letterDef>ThreatBig</letterDef>
+			<letterText>В Ancient Complex произошла засада!</letterText>
+	</IncidentDef>
+	-->
+</Defs>
