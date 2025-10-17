@@ -3,11 +3,12 @@
 	<XenotypeDef>
     <defName>GFAncientXenotype</defName>
     <label>Ancients</label>
-    <description>An unknown ancient race with incredible mental abilities</description>
-    <descriptionShort></descriptionShort>
+    <description>An ancient race, their origins shrouded in mystery, boasts incredible mental powers and rapid regeneration. Their keen senses, including exceptional eyesight, grant them unmatched awareness.</description>
+    <descriptionShort>An unknown ancient race with incredible mental abilities</descriptionShort>
     <iconPath>UI/Icons/Xenotypes/Ancients</iconPath>
-    <combatPowerFactor>1.5</combatPowerFactor>
+		<inheritable>true</inheritable>
     <genes>
+			<li>Beard_NoBeardOnly</li>
 			<li>GF_AncientBody</li>
 			<li>GF_AncientHead</li>
 			<li>GF_AncientWings</li>
@@ -17,6 +18,7 @@
 			<li>AptitudeTerrible_Animals</li>
 			<li>Aggression_HyperAggressive</li>
 			<li>Sterile</li>
+			<li>GF_Skin_InkGray</li>
     </genes>
   </XenotypeDef>
 </Defs>

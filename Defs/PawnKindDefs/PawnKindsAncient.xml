@@ -13,6 +13,7 @@
 		<gearHealthRange>1~2.3</gearHealthRange>
 		<techHediffsChance>0.8</techHediffsChance>
     <apparelColor>(90,98,113)</apparelColor>
+		<isFighter>true</isFighter>
 		<techHediffsRequired>
       <li>DeathAcidifier</li>
     </techHediffsRequired>
@@ -29,7 +30,14 @@
 			</subOptionsChooseOne>
 		</inventoryOptions>
 		<apparelMoney>7000~12000</apparelMoney>
-			<allowRoyalRoomRequirements>False</allowRoyalRoomRequirements>
+		<allowRoyalRoomRequirements>False</allowRoyalRoomRequirements>
+		<styleItemTags>
+      <li>
+        <tag>Soldier</tag>
+        <baseWeight>1</baseWeight>
+        <weightFactor>1</weightFactor>
+      </li>
+    </styleItemTags>
 		<apparelRequired>
       <li>Apparel_ArmorHelmetCataphract</li>
       <li>Apparel_ArmorCataphract</li>
@@ -57,6 +65,9 @@
     </specificApparelRequirements>
 		<initialWillRange>3</initialWillRange>
 		<initialResistanceRange>12~20</initialResistanceRange>
+		<requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
 		<xenotypeSet>
       <xenotypeChances>
         <GFAncientXenotype>999</GFAncientXenotype>
@@ -67,7 +78,7 @@
 	<PawnKindDef ParentName="AncientPawnBase">
 		<defName>GFSoldier</defName>
 		<label>Ancient Soldier</label>
-		<combatPower>160</combatPower>
+		<combatPower>140</combatPower>
     <weaponMoney>2500~4100</weaponMoney>
 		<weaponTags>
       <li>SpacerGun</li>
@@ -75,40 +86,50 @@
 		<skills>
       <li>
         <skill>Shooting</skill>
-        <range>6~20</range>
+        <range>8~16</range>
       </li>
     </skills>
+		<disallowedTraits>
+      <li>Brawler</li>
+    </disallowedTraits>
 	</PawnKindDef>
 
 	<PawnKindDef ParentName="AncientPawnBase">
 		<defName>GFWarrior</defName>
 		<label>Ancient Warrior</label>
-		<combatPower>140</combatPower>
+		<combatPower>120</combatPower>
     <weaponMoney>2000~3500</weaponMoney>
 		<skills>
 			<li>
         <skill>Melee</skill>
-        <range>6~20</range>
+        <range>8~16</range>
       </li>
 		</skills>
 		<weaponTags>
       <li>Ultra</li>
 		</weaponTags>
+		<disallowedTraits>
+      <li>Brawler</li>
+    </disallowedTraits>
 	</PawnKindDef>
 
 	<PawnKindDef ParentName="AncientPawnBase">
 		<defName>GFMarauder</defName>
 		<label>Ancient Marauder</label>
 		<factionLeader>true</factionLeader>
-		<combatPower>180</combatPower>
+		<combatPower>160</combatPower>
 		<weaponMoney>3000~5000</weaponMoney>
 		<weaponTags>
       <li>SpacerGun</li>
 		</weaponTags>
 		<skills>
+			<li>
+        <skill>Melee</skill>
+        <range>5~14</range>
+      </li>
       <li>
         <skill>Shooting</skill>
-        <range>6~20</range>
+        <range>5~14</range>
       </li>
     </skills>
 	</PawnKindDef>

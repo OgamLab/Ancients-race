@@ -4,19 +4,35 @@
 	<author>GRIMFORGETeam/Ogam/ᗣᗰᘜᖘᗝᙐᑌᖆ/Mortis</author>
 	<supportedVersions>
 		<li>1.5</li>
+		<li>1.6</li>
 	</supportedVersions>
-	<packageId>GrimforgeTeam.Ancients</packageId>
-	<description>Description: A new unique race, with it’s own faction. Using gear from ancient weaponry. They are powerful, and should be feared whenever they appear.</description>
+	<packageId>GrimForge.AncientRace</packageId>
+	<description>A new unique race, with it’s own faction. Using gear from ancient weaponry. They are powerful, and should be feared whenever they appear.</description>
 	<url>https://github.com/TheMXA/Ancients-race/tree/main</url>
 	<modDependencies>
 		<li>
 			<packageId>RavenousEye.AncientEquipment</packageId>
 			<displayName>Ancient Weaponry</displayName>
-			<downloadUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=3466124052</downloadUrl>
+			<downloadUrl>https://steamcommunity.com/workshop/filedetails/?id=3466124052</downloadUrl>
+		</li>
+		<li>
+			<packageId>sarg.alphagenes</packageId>
+			<displayName>Alpha Genes</displayName>
+			<downloadUrl>https://steamcommunity.com/workshop/filedetails/?id=2891845502</downloadUrl>
+		</li>
+		<li>
+			<packageId>OskarPotocki.VanillaFactionsExpanded.Core</packageId>
+			<displayName>Vanilla Expanded Framework</displayName>
+			<steamWorkshopUrl>https://steamcommunity.com/workshop/filedetails/?id=2023507013</steamWorkshopUrl>
+			<downloadUrl>https://github.com/Vanilla-Expanded/VanillaExpandedFramework</downloadUrl>
 		</li>
 	</modDependencies>
 	<loadAfter>
 		<li>Ludeon.RimWorld</li>
-    <li>RavenousEye.AncientEquipment</li>
+		<li>Ludeon.RimWorld.Royalty</li>
+		<li>Ludeon.RimWorld.Ideology</li>
+		<li>Ludeon.RimWorld.Biotech</li>
+		<li>OskarPotocki.VanillaFactionsExpanded.Core</li>
+		<li>RavenousEye.AncientEquipment</li>
 	</loadAfter>
 </ModMetaData>

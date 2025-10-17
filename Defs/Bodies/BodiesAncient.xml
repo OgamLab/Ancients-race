@@ -41,7 +41,7 @@
 					<height>Top</height>
 					<depth>Inside</depth>
 					<groups>
-						<li>AncientDestroyerTurretGroup</li>
+						<li>DestroyerTurretGroup</li>
 					</groups>
 					<parts>
 						<li>
@@ -117,7 +117,7 @@
 	</BodyPartGroupDef>
 	
 	<BodyPartGroupDef>
-		<defName>AncientDestroyerTurretGroup</defName>
+		<defName>DestroyerTurretGroup</defName>
 		<label>turret</label>
 	</BodyPartGroupDef>
 

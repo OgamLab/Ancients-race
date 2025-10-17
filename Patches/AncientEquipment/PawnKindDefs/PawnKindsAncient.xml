@@ -6,11 +6,16 @@
 				<xpath>Defs/PawnKindDef[defaultFactionType="GFAncients"]/weaponTags</xpath>
 			</li>
 			<li Class="PatchOperationRemove">
+				<xpath>Defs/PawnKindDef[defaultFactionType="GFAncients"]/styleItemTags</xpath>
+			</li>
+			<li Class="PatchOperationRemove">
 				<xpath>Defs/PawnKindDef[defaultFactionType="GFAncients"]/apparelRequired</xpath>
+			</li>
+			<li Class="PatchOperationRemove">
+				<xpath>Defs/PawnKindDef[defaultFactionType="GFAncients"]/specificApparelRequirements</xpath>
 			</li>
 		</operations>
 	</Operation>
-	
 	<Operation Class="PatchOperationSequence">
 		<operations>
 			<li Class="PatchOperationRemove">
@@ -22,13 +27,15 @@
 					<weaponTags>
 						<li>REAWGun</li>
 					</weaponTags>
-						<apparelRequired>
+					<apparelRequired>
 						<li>REAW_AncientCombatArmor</li>
 						<li>REAW_AncientCombatHelmet</li>
 					</apparelRequired>
+					<apparelTags>
+						<li>REAWArmor</li>
+					</apparelTags>
 				</value>
 			</li>
-			
 			<li Class="PatchOperationRemove">
 				<xpath>Defs/PawnKindDef[defName="GFWarrior"]/weaponTags</xpath>
 			</li>
@@ -42,9 +49,11 @@
 						<li>REAW_AncientStrikerArmor</li>
 						<li>REAW_AncientStrikerHelmet</li>
 					</apparelRequired>
+					<apparelTags>
+						<li>REAWArmor</li>
+					</apparelTags>
 				</value>
 			</li>
-			
 			<li Class="PatchOperationRemove">
 				<xpath>Defs/PawnKindDef[defName="GFMarauder"]/weaponTags</xpath>
 			</li>
@@ -60,7 +69,12 @@
 					<specificApparelRequirements>
 						<li>
 							<bodyPartGroup>FullHead</bodyPartGroup>
-							<requiredTag>REAWArmor</requiredTag>
+							<alternateTagChoices>
+								<li>
+									<tag>REAWArmor</tag>
+									<chance>1</chance>
+								</li>
+							</alternateTagChoices>
 						</li>
 						<li>
 							<bodyPartGroup>Torso</bodyPartGroup>

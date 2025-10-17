@@ -2,7 +2,6 @@
 
 
 <Defs>
-
   <ThinkTreeDef>
     <defName>GFAncientDestroyerTree</defName>
     <thinkRoot Class="ThinkNode_Priority">

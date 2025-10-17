@@ -1,13 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
 	<ThingDef ParentName="BasePawn" Name="AncientBaseVehicle" Abstract="True">
 		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
 		<statBases>
 			<ToxicResistance>1</ToxicResistance>
 			<Flammability>0</Flammability>
-			<ComfyTemperatureMin>-1000</ComfyTemperatureMin>
-			<ComfyTemperatureMax>1000</ComfyTemperatureMax>
+			<ComfyTemperatureMin>-100</ComfyTemperatureMin>
+			<ComfyTemperatureMax>250</ComfyTemperatureMax>
 			<MeatAmount>0</MeatAmount>
 			<ArmorRating_Heat>2.00</ArmorRating_Heat>
 		</statBases>
@@ -23,9 +22,6 @@
 			<soundCallIntervalFriendlyFactor>2</soundCallIntervalFriendlyFactor>
 		</race>
 	</ThingDef>
-
-	<!-- Tank -->
-
 	<ThingDef ParentName="AncientBaseVehicle">
 		<defName>Race_GFAncientDestroyer</defName>
 		<label>Ancient destroyer</label>
@@ -42,7 +38,7 @@
 					<li>Blunt</li>
 				</capacities>
 				<power>17</power>
-				<cooldownTime>3.6</cooldownTime>
+				<cooldownTime>5</cooldownTime>
 				<linkedBodyPartsGroup>DestroyerFrontPlate</linkedBodyPartsGroup>
 				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
 			</li>
@@ -56,7 +52,7 @@
 			<lifeStageAges>
 				<li>
 					<def>GFAncientDestroyerFullyFormed</def>
-					<minAge>0</minAge>
+					<minAge>1</minAge>
 					<soundWounded>Pawn_Mech_Termite_Wounded</soundWounded>
 					<soundDeath>Pawn_Mech_Termite_Death</soundDeath>
 					<soundCall>Pawn_Mech_Termite_Call</soundCall>
@@ -75,9 +71,9 @@
 				<propagationSpeed>0.5</propagationSpeed>
 				<chanceNeverExplodeFromDamage>1</chanceNeverExplodeFromDamage>
 			</li>
-			<li Class="CompProperties_TargetingBeam" />
+			<li Class="CompProperties_TargetingBeam"/>
 			<li Class="CompProperties_TurretGun">
-				<turretDef>Gun_GFAncientDestroyerTurret</turretDef>
+				<turretDef>Gun_GFTurret</turretDef>
 				<angleOffset>-90</angleOffset>
 				<renderNodeProperties>
 					<li>
@@ -89,19 +85,16 @@
 						<pawnType>Any</pawnType>
 						<drawData>
 							<!-- <dataNorth> -->
-								<!-- <offset>(-0.31,0,0)</offset> -->
+							<!-- <offset>(-0.31,0,0)</offset> -->
 							<!-- </dataNorth> -->
-							<!-- <dataEast> -->
-								<!-- <offset>(0,0,0.31)</offset> -->
-							<!-- </dataEast> -->
+							<dataEast>
+								<offset>(0,0,0.31)</offset>
+							</dataEast>
 							<!-- <dataSouth> -->
-								<!-- <offset>(0.31,0,0)</offset> -->
+							<!-- <offset>(0.31,0,0)</offset> -->
 							<!-- </dataSouth> -->
-							<!-- <dataWest> -->
-								<!-- <offset>(0,0,0.31)</offset> -->
-								<!-- <rotationOffset>180</rotationOffset> -->
-							<!-- </dataWest> -->
 							<dataWest>
+								<offset>(0,0,0.31)</offset>
 								<rotationOffset>180</rotationOffset>
 							</dataWest>
 						</drawData>
@@ -120,23 +113,21 @@
 		<label>fully-formed</label>
 		<visible>false</visible>
 	</LifeStageDef>
-
 	<PawnKindDef>
 		<defName>GFAncientDestroyer</defName>
-		<label>Ancient MBT</label>
+		<label>Ancient destroyer</label>
 		<race>Race_GFAncientDestroyer</race>
-		<combatPower>400</combatPower>
-		<defaultFactionType>GFAncients</defaultFactionType> <!-- Change Faction -->
+		<combatPower>300</combatPower>
+		<defaultFactionType>GFAncients</defaultFactionType>
 		<aiAvoidCover>true</aiAvoidCover>
 		<destroyGearOnDrop>true</destroyGearOnDrop>
 		<allowInMechClusters>false</allowInMechClusters>
 		<canStrip>false</canStrip>
-		<minGenerationAge>200</minGenerationAge>
-		<forceNormalGearQuality>true</forceNormalGearQuality>
+		<minGenerationAge>100</minGenerationAge>
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
-					<texPath>Things/Pawn/Vehicle/AncientDestroyer</texPath> <!-- -->
+					<texPath>Things/Pawn/Vehicle/GF_AncientDestroyer</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<drawSize>(5,5)</drawSize>
 					<shadowData>
@@ -145,24 +136,21 @@
 				</bodyGraphicData>
 			</li>
 		</lifeStages>
-		<weaponMoney>9999~9999</weaponMoney>
-		<weaponTags>
-			<li>GFAncientDestroyerGun</li>
-		</weaponTags>
+		<fixedInventory>
+      <Gun_GFDestroyer />
+    </fixedInventory>
 	</PawnKindDef>
-
 	<!-- tank turret -->
-
 	<ThingDef ParentName="BaseWeapon">
-		<defName>Gun_GFAncientDestroyerTurret</defName>
+		<defName>Gun_GFTurret</defName>
 		<label>destroyer turret</label>
 		<graphicData>
-			<texPath>Things/Pawn/Vehicle/AncientDestroyerGun</texPath> <!-- -->
+			<texPath>Things/Pawn/Vehicle/GFDestroyerGun</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>(4,4)</drawSize>
+			<drawSize>(3,3)</drawSize>
 		</graphicData>
 		<!-- <equippedAngleOffset>0</equippedAngleOffset> -->
-		<!-- <equippedDistanceOffset>0</equippedDistanceOffset> -->
+		<!-- <equippedDistanceOffset>0.15</equippedDistanceOffset> -->
 		<statBases>
 			<AccuracyTouch>0.79</AccuracyTouch>
 			<AccuracyShort>0.42</AccuracyShort>
@@ -178,11 +166,11 @@
 		<techLevel>Ultra</techLevel>
 		<destroyOnDrop>true</destroyOnDrop>
 		<weaponTags Inherit="False">
-			<li>GFAncientDestroyer</li>
+			<li>GFAncientDestroyerTurret</li>
 		</weaponTags>
 		<verbs>
 			<li>
-				<defaultProjectile>Bullet_GFAncientDestroyerShell</defaultProjectile>
+				<defaultProjectile>Bullet_GFDestroyerShell</defaultProjectile>
 				<verbClass>Verb_Shoot</verbClass>
 				<forceNormalTimeSpeed>false</forceNormalTimeSpeed>
 				<forcedMissRadiusClassicMortars>13</forcedMissRadiusClassicMortars>
@@ -197,16 +185,16 @@
 				<burstShotCount>2</burstShotCount>
 				<soundCast>DCannon</soundCast>
 				<soundCastTail>GunTail_Heavy</soundCastTail>
-				<linkedBodyPartsGroup>AncientDestroyerTurretGroup</linkedBodyPartsGroup>
+				<linkedBodyPartsGroup>DestroyerTurretGroup</linkedBodyPartsGroup>
 				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
 			</li>
 		</verbs>
 	</ThingDef>
-	<ThingDef>
-		<defName>Bullet_GFAncientDestroyerShell</defName>
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_GFDestroyerShell</defName>
 		<label>explosive mortar shell</label>
 		<graphicData>
-			<texPath>Things/Projectile/ShellHighExplosive</texPath> <!-- -->
+			<texPath>Things/Projectile/Shot</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>TransparentPostLight</shaderType>
 		</graphicData>
@@ -223,25 +211,15 @@
 			<explosionRadius>2</explosionRadius>
 		</projectile>
 	</ThingDef>
-
-	<ThingDef ParentName="BaseGun">
-		<defName>Gun_GFAncientDestroyer</defName>
-		<label>Ancient Defense Destroyer machinegun</label>
-		<description>Ancient destroyer machinegun.</description>
+	<ThingDef Name="GFBaseGun" Abstract="True" ParentName="BaseGun">
+		<techLevel>Spacer</techLevel>
 		<graphicData>
-			<texPath>Things/Item/Equipment/OrionCorp/AncientDestroyerMachineGun</texPath> <!-- -->
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
-		<smeltable>false</smeltable>
-		<tradeability>None</tradeability>
-		<techLevel>Ultra</techLevel>
-		<destroyOnDrop>true</destroyOnDrop>
-		<weaponTags Inherit="False">
-			<li>GFAncientDestroyerGun</li>
-		</weaponTags>
-		<equippedAngleOffset>0</equippedAngleOffset>
-		<equippedDistanceOffset>0</equippedDistanceOffset>
 		<soundInteract>Interact_ChargeRifle</soundInteract>
+		<thingSetMakerTags>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
 		<tradeTags>
 			<li>WeaponRanged</li>
 		</tradeTags>
@@ -267,9 +245,25 @@
 				<cooldownTime>2</cooldownTime>
 			</li>
 		</tools>
+	</ThingDef>
+	
+	<ThingDef ParentName="GFBaseGun">
+		<defName>Gun_GFDestroyer</defName>
+		<label>Ancient Destroyer machinegun</label>
+		<description>Ancient destroyer machinegun.</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/GFDestroyerMachineGun</texPath>
+		</graphicData>
+		<smeltable>false</smeltable>
+		<tradeability>None</tradeability>
+		<techLevel>Ultra</techLevel>
+		<destroyOnDrop>true</destroyOnDrop>
+		<weaponTags Inherit="False">
+			<li>GFDestroyerMGun</li>
+		</weaponTags>
 		<statBases>
 			<Mass>3</Mass>
-			<MarketValue>800</MarketValue>
+			<MarketValue>1000</MarketValue>
 			<AccuracyTouch>0.95</AccuracyTouch>
 			<AccuracyShort>0.80</AccuracyShort>
 			<AccuracyMedium>0.60</AccuracyMedium>
@@ -280,29 +274,31 @@
 			<li>
 				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>Bullet_GFAncientDestroyerMachineGun</defaultProjectile>
+				<defaultProjectile>Bullet_GFDestroyerMachineGun</defaultProjectile>
 				<warmupTime>0.8</warmupTime>
-				<range>15</range>
+				<range>30</range>
 				<ticksBetweenBurstShots>4</ticksBetweenBurstShots>
 				<burstShotCount>4</burstShotCount>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
 				<soundCast>GFAncientDestroyerMachineGun</soundCast>
 				<soundCastTail>GunTail_Light</soundCastTail>
 				<muzzleFlashScale>9</muzzleFlashScale>
 			</li>
 		</verbs>
 	</ThingDef>
-
-	  <ThingDef ParentName="BaseBullet">
-    <defName>Bullet_GFAncientDestroyerMachineGun</defName>
-    <label>machinegun bullet</label>
-    <graphicData>
-      <texPath>Things/Projectile/Bullet_big</texPath> <!-- -->
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <projectile>
-      <damageDef>Bullet</damageDef>
-      <damageAmountBase>8</damageAmountBase>
-      <speed>120</speed>
-    </projectile>
-  </ThingDef>
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_GFDestroyerMachineGun</defName>
+		<label>machinegun bullet</label>
+		<graphicData>
+			<texPath>Things/Projectile/SmallBullet</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>8</damageAmountBase>
+			<speed>150</speed>
+		</projectile>
+	</ThingDef>
 </Defs>

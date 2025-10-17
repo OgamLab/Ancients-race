@@ -1,37 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-	<Operation Class="PatchOperationSequence">
-		<operations>
-			<li Class="PatchOperationRemove">
-				<xpath>Defs/PawnKindDef[defName="GFAncientBoss"]/apparelRequired</xpath>
-			</li>
-			<!--
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/PawnKindDef[defName="GFAncientBoss"]/weaponTags</xpath>
-				<value>
-					<weaponTags>
-						<li>REAWArcThrower</li>
-					</weaponTags>
-				</value>
-			</li>
-			-->
-			<li Class="PatchOperationAdd">
-				<xpath>Defs/PawnKindDef[defName="GFAncientBoss"]</xpath>
-				<value>
-					<apparelTags>
-						<li>REAWArmor</li>
-					</apparelTags>
-					<specificApparelRequirements>
-						<li>
-							<bodyPartGroup>FullHead</bodyPartGroup>
-							<requiredTag>REAWArmor</requiredTag>
-						</li>
-						<li>
-							<bodyPartGroup>Torso</bodyPartGroup>
-						</li>
-					</specificApparelRequirements>
-				</value>
-			</li>
-		</operations>
+<!--
+	<Operation Class="PatchOperationRemove">
+		<xpath>Defs/PawnKindDef[defName="GFAncientBoss"]/apparelRequired</xpath>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/PawnKindDef[defName="GFAncientBoss"]/weaponTags</xpath>
+		<value>
+			<weaponTags>
+				<li>REAWArcThrower</li>
+			</weaponTags>
+		</value>
+	</Operation>
+	-->
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/PawnKindDef[defName="GFAncientBoss"]</xpath>
+		<value>
+			<weaponTags>
+				<li>REAWArcThrower</li>
+			</weaponTags>
+			<apparelTags>
+				<li>REAWArmor</li>
+			</apparelTags>
+			<specificApparelRequirements>
+				<li>
+					<bodyPartGroup>FullHead</bodyPartGroup>
+					<requiredTag>REAWArmor</requiredTag>
+				</li>
+				<li>
+					<bodyPartGroup>Torso</bodyPartGroup>
+				</li>
+			</specificApparelRequirements>
+		</value>
 	</Operation>
 </Patch>

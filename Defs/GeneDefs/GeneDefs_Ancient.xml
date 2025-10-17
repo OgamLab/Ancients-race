@@ -1,94 +1,235 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<GeneDef ParentName="GeneBodyBase">
-    <defName>GF_AncientBody</defName>
-    <label>ancient body</label>
-    <description>The secrets of longevity and extraordinary regeneration are etched into this individual’s cells. Wounds close before your very eyes, as if time is reversing their effects.</description>
-    <iconPath>UI/Icons/Genes/Gene_ElongatedFingers</iconPath> <!-- -->
-    <displayCategory>GF_Ancient</displayCategory>
-    <displayOrderInCategory>321</displayOrderInCategory>
-    <biostatCpx>1</biostatCpx>
-    <biostatMet>-1</biostatMet>
-    <statOffsets>
-			<InjuryHealingFactor>10</InjuryHealingFactor>
+	<GeneDef>
+		<defName>GF_AncientBody</defName>
+		<label>ancient body</label>
+		<labelShortAdj>slug-like</labelShortAdj>
+		<description>The secrets of longevity and extraordinary regeneration are etched into this individual’s cells. Wounds close before your very eyes, as if time is reversing their effects.</description>
+		<iconPath>UI/Icons/Genes/GF_AncientBody</iconPath>
+		<displayCategory>GF_Ancient</displayCategory>
+		<displayOrderInCategory>321</displayOrderInCategory>
+		<biostatCpx>1</biostatCpx>
+		<biostatMet>-1</biostatMet>
+		<statOffsets>
+			<InjuryHealingFactor>3</InjuryHealingFactor>
 		</statOffsets>
-    <symbolPack>
-      <prefixSymbols>
-        <li><symbol>body</symbol></li>
-        <li><symbol>regeneration</symbol></li>
-      </prefixSymbols>
-    </symbolPack>
-		<graphicData>
-			<graphicPath>Things/Pawn/Humanlike/BodyAttachments/AG_RainbowWings/AG_RainbowWings</graphicPath> <!-- -->
-			<drawScale>2</drawScale>
-			<drawOffsetNorth>(0, 0.19, 0)</drawOffsetNorth>
-			<drawOffsetSouth>(0, 0, 0)</drawOffsetSouth>
-			<drawOffsetEast>(0, 0, 0)</drawOffsetEast>
-		</graphicData>
-  </GeneDef>
-
-	<GeneDef ParentName="GeneEarsBase">
-    <defName>GF_AncientHead</defName>
-    <label>ancient head</label>
-    <description>This individual’s head holds a secret, bestowing vision beyond the capabilities of ordinary humans. Their sight is razor sharp in daylight, and they possess an eerie ability to navigate even the blackest night, raising questions about the nature of their existence.</description>
-    <iconPath>UI/Icons/Genes/Gene_ElongatedFingers</iconPath> <!-- -->
-    <displayOrderInCategory>322</displayOrderInCategory>
-    <displayCategory>GF_Ancient</displayCategory>
-    <biostatCpx>1</biostatCpx>
-    <biostatMet>-1</biostatMet>
-    <ignoreDarkness>true</ignoreDarkness>
-    <capMods>
-      <li>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>body</symbol>
+				</li>
+				<li>
+					<symbol>regeneration</symbol>
+				</li>
+			</prefixSymbols>
+		</symbolPack>
+		<fur>GF_AncientsBody</fur>
+		<skinIsHairColor>false</skinIsHairColor>
+		<tattoosVisible>false</tattoosVisible>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_Fur</nodeClass>
+				<workerClass>PawnRenderNodeWorker_Fur</workerClass>
+				<baseLayer>5</baseLayer>
+				<shaderTypeDef>CutoutComplex</shaderTypeDef>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<colorType>Skin</colorType>
+				<parentTagDef>Body</parentTagDef>
+			</li>
+		</renderNodeProperties>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/GF_Endogenes</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/GF_Xenogenes</backgroundPathXenogenes>
+				<useSkinAndHairColorsForFur>true</useSkinAndHairColorsForFur>
+				<furHidesBody>true</furHidesBody>
+			</li>
+		</modExtensions>
+	</GeneDef>
+	<GeneDef>
+		<defName>GF_AncientHead</defName>
+		<label>ancient head</label>
+		<description>This individual’s head holds a secret, bestowing vision beyond the capabilities of ordinary humans. Their sight is razor sharp in daylight, and they possess an eerie ability to navigate even the blackest night, raising questions about the nature of their existence.</description>
+		<iconPath>UI/Icons/Genes/GF_AncientHead</iconPath>
+		<displayOrderInCategory>322</displayOrderInCategory>
+		<displayCategory>GF_Ancient</displayCategory>
+		<selectionWeight>0</selectionWeight>
+		<biostatCpx>1</biostatCpx>
+		<biostatMet>-1</biostatMet>
+		<forcedHeadTypes>
+			<!-- <li>GF_AncientFemaleFace</li> -->
+			<li>GF_AncientMaleFace</li>
+		</forcedHeadTypes>
+		<ignoreDarkness>true</ignoreDarkness>
+		<capMods>
+			<li>
 				<capacity>Sight</capacity>
 				<offset>0.10</offset>
 			</li>
-    </capMods>
-    <symbolPack>
-      <prefixSymbols>
-        <li><symbol>head</symbol></li>
-        <li><symbol>years</symbol></li>
-      </prefixSymbols>
-    </symbolPack>
-		<graphicData>
-			<graphicPath>Things/Pawn/Humanlike/BodyAttachments/AG_RainbowWings/AG_RainbowWings</graphicPath> <!-- -->
-			<drawScale>2</drawScale>
-			<drawOffsetNorth>(0, 0.19, 0)</drawOffsetNorth>
-			<drawOffsetSouth>(0, 0, 0)</drawOffsetSouth>
-			<drawOffsetEast>(0, 0, 0)</drawOffsetEast>
-		</graphicData>
-  </GeneDef>
-
+		</capMods>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<parentTagDef>Head</parentTagDef>
+				<texPaths>
+					<!-- <li>Things/Pawn/Humanlike/HeadAttachments/Metal_FemaleHead</li> -->
+					<li>Things/Pawn/Humanlike/HeadAttachments/Metal_MaleHead</li>
+				</texPaths>
+				<drawData>
+					<defaultData>
+						<layer>60</layer>
+					</defaultData>
+				</drawData>
+				<visibleFacing>
+					<li>North</li>
+					<li>South</li>
+					<li>West</li>
+				</visibleFacing>
+			</li>
+		</renderNodeProperties>
+		<exclusionTags>
+			<li>GF_Heads</li>
+			<li>Heads</li>
+			<li>Head</li>
+		</exclusionTags>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>ancient</symbol>
+				</li>
+				<li>
+					<symbol>head</symbol>
+				</li>
+				<li>
+					<symbol>eyes</symbol>
+				</li>
+			</prefixSymbols>
+		</symbolPack>
+		<beardTagFilter>
+			<whitelist>true</whitelist>
+			<tags>
+				<li>NoBeard</li>
+			</tags>
+		</beardTagFilter>
+		<hairTagFilter>
+			<whitelist>true</whitelist>
+			<tags>
+				<li>Bald</li>
+			</tags>
+		</hairTagFilter>
+		<!--
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/GF_Endogenes</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/GF_Xenogenes</backgroundPathXenogenes>
+			</li>
+		</modExtensions>
+		-->
+	</GeneDef>
 	<GeneDef>
-    <defName>GF_AncientWings</defName>
-    <label>ancient wings</label>
-    <description>Carriers of this gene have a pair of giant wings sprouting from their back.</description>
-    <iconPath>UI/Icons/Genes/Gene_LongJumpLegs</iconPath> <!-- -->
-    <displayCategory>GF_Ancient</displayCategory>
+		<defName>GF_AncientWings</defName>
+		<label>ancient wings</label>
+		<description>Carriers of this gene have a pair of giant wings sprouting from their back.</description>
+		<iconPath>UI/Icons/Genes/GF_AncientWings</iconPath>
+		<displayCategory>GF_Ancient</displayCategory>
 		<biostatCpx>1</biostatCpx>
-    <abilities>
-      <li>GF_WingPoweredJump</li>
-    </abilities>
-    <descriptionHyperlinks>
-      <AbilityDef>GF_WingPoweredJump</AbilityDef>
-    </descriptionHyperlinks>
-    <biostatMet>-1</biostatMet>
+		<abilities>
+			<li>GF_WingPoweredJump</li>
+		</abilities>
+		<descriptionHyperlinks>
+			<AbilityDef>GF_WingPoweredJump</AbilityDef>
+		</descriptionHyperlinks>
+		<biostatMet>-1</biostatMet>
 		<selectionWeight>0</selectionWeight>
-    <symbolPack>
-      <prefixSymbols>
-        <li><symbol>wing</symbol></li>
-        <li><symbol>fly</symbol></li>
-      </prefixSymbols>
-    </symbolPack>
-		<graphicData>
-			<graphicPath>Things/Pawn/Humanlike/BodyAttachments/AG_RainbowWings/AG_RainbowWings</graphicPath> <!-- -->
-			<drawScale>2</drawScale>
-			<drawOffsetNorth>(0, 0.19, 0)</drawOffsetNorth>
-			<drawOffsetSouth>(0, 0, 0)</drawOffsetSouth>
-			<drawOffsetEast>(0, 0, 0)</drawOffsetEast>
-		</graphicData>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>wing</symbol>
+				</li>
+				<li>
+					<symbol>fly</symbol>
+				</li>
+			</prefixSymbols>
+		</symbolPack>
+		<renderNodeProperties>
+			<li>
+				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+				<texPath>Things/Pawn/Humanlike/BodyAttachments/GF_AncientWings/GF_AncientWings</texPath>
+				<drawSize>1.5</drawSize>
+				<parentTagDef>Body</parentTagDef>
+				<drawData>
+					<defaultData>
+						<layer>-2</layer>
+					</defaultData>
+					<scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+					<dataNorth>
+            <offset>(0, 0, 0.2)</offset>
+            <layer>90</layer>
+          </dataNorth>
+          <dataSouth>
+            <offset>(0, 0, 0.2)</offset>
+          </dataSouth>
+          <dataEast>
+            <offset>(0, 0, 0.3)</offset>
+            <layer>70</layer>
+          </dataEast>
+          <dataWest>
+            <offset>(0, 0, 0.3)</offset>
+            <layer>70</layer>
+          </dataWest>
+				</drawData>
+			</li>
+		</renderNodeProperties>
 		<exclusionTags>
 			<li>Wing</li>
 			<li>Wings</li>
 		</exclusionTags>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/GF_Endogenes</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/GF_Xenogenes</backgroundPathXenogenes>
+			</li>
+		</modExtensions>
+	</GeneDef>
+	<GeneDef ParentName="GeneSkinColorOverride">
+    <defName>GF_Skin_InkGray</defName>
+    <label>ink gray ancient skin</label>
+    <labelShortAdj>noir</labelShortAdj>
+    <description>Carriers of this gene produce a pigment that turns their skin a pale gray color almost as gray as ink.</description>
+    <randomBrightnessFactor>0</randomBrightnessFactor>
+    <skinColorOverride>(182, 180, 159)</skinColorOverride>
+    <displayOrderInCategory>99</displayOrderInCategory>
+    <symbolPack>
+      <prefixSymbols>
+        <li><symbol>Ink</symbol></li>
+        <li><symbol>Gray</symbol></li>
+      </prefixSymbols>
+      <suffixSymbols>
+        <li><symbol>Gray</symbol></li>
+        <li><symbol>Ink</symbol></li>
+      </suffixSymbols>
+    </symbolPack>
   </GeneDef>
+	<!--
+	<GeneDef ParentName="AG_WingBase">
+		<defName>GF_NoWings</defName>
+		<label>no wings</label>
+		<description>Carriers of this gene don't have wings.</description>
+		<customEffectDescriptions>
+			<li>With this gene you can create xenotypes in which a pawn can have wings or a lack of them at random</li>
+		</customEffectDescriptions>
+		<iconPath>UI/Icons/Genes/GF_AncientNoWings</iconPath>
+		<biostatCpx>0</biostatCpx>
+		<displayCategory>AG_Wings</displayCategory>
+		<displayOrderInCategory>-1000</displayOrderInCategory>
+		<selectionWeight>0</selectionWeight>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/GF_Endogenes</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/GF_Xenogenes</backgroundPathXenogenes>
+			</li>
+		</modExtensions>
+	</GeneDef>
+	-->
 </Defs>

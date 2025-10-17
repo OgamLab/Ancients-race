@@ -49,7 +49,9 @@
 		<alive>false</alive>
 		<tags>
 			<li>BloodPumpingSource</li>
-			<li>BreathingPathway</li>
+			<li>BloodFiltrationKidney</li>
+			<li>MetabolismSource</li>
+			<li>BreathingSource</li>
 		</tags>
 	</BodyPartDef>
 	
