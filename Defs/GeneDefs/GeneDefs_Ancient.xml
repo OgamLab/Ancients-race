@@ -142,6 +142,7 @@
 		</descriptionHyperlinks>
 		<biostatMet>-1</biostatMet>
 		<selectionWeight>0</selectionWeight>
+		<randomChosen>true</randomChosen>
 		<symbolPack>
 			<prefixSymbols>
 				<li>
@@ -211,9 +212,8 @@
       </suffixSymbols>
     </symbolPack>
   </GeneDef>
-	<!--
-	<GeneDef ParentName="AG_WingBase">
-		<defName>GF_NoWings</defName>
+	<GeneDef>
+		<defName>GF_AncientNoWings</defName>
 		<label>no wings</label>
 		<description>Carriers of this gene don't have wings.</description>
 		<customEffectDescriptions>
@@ -221,9 +221,15 @@
 		</customEffectDescriptions>
 		<iconPath>UI/Icons/Genes/GF_AncientNoWings</iconPath>
 		<biostatCpx>0</biostatCpx>
-		<displayCategory>AG_Wings</displayCategory>
+		<biostatMet>0</biostatMet>
+		<displayCategory>GF_Ancient</displayCategory>
 		<displayOrderInCategory>-1000</displayOrderInCategory>
 		<selectionWeight>0</selectionWeight>
+		<exclusionTags>
+			<li>Wing</li>
+			<li>Wings</li>
+		</exclusionTags>
+		<randomChosen>true</randomChosen>
 		<modExtensions>
 			<li Class="VEF.Genes.GeneExtension">
 				<backgroundPathEndogenes>UI/Icons/Genes/GF_Endogenes</backgroundPathEndogenes>
@@ -231,5 +237,4 @@
 			</li>
 		</modExtensions>
 	</GeneDef>
-	-->
 </Defs>

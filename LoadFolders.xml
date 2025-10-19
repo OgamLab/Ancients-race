@@ -4,4 +4,8 @@
     <li>/</li>
     <li IfModActive="RavenousEye.AncientEquipment">Patches/AncientEquipment</li>
   </v1.5>
+	<v1.6>
+    <li>/</li>
+    <li IfModActive="RavenousEye.AncientEquipment">Patches/AncientEquipment</li>
+  </v1.6>
 </loadFolders>

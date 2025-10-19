@@ -68,17 +68,12 @@
 		<requiredWorkTags>
       <li>Violent</li>
     </requiredWorkTags>
-		<xenotypeSet>
-      <xenotypeChances>
-        <GFAncientXenotype>999</GFAncientXenotype>
-      </xenotypeChances>
-    </xenotypeSet>
 	</PawnKindDef>
 
 	<PawnKindDef ParentName="AncientPawnBase">
 		<defName>GFSoldier</defName>
 		<label>Ancient Soldier</label>
-		<combatPower>140</combatPower>
+		<combatPower>200</combatPower>
     <weaponMoney>2500~4100</weaponMoney>
 		<weaponTags>
       <li>SpacerGun</li>
@@ -86,7 +81,7 @@
 		<skills>
       <li>
         <skill>Shooting</skill>
-        <range>8~16</range>
+        <range>4~16</range>
       </li>
     </skills>
 		<disallowedTraits>
@@ -97,12 +92,12 @@
 	<PawnKindDef ParentName="AncientPawnBase">
 		<defName>GFWarrior</defName>
 		<label>Ancient Warrior</label>
-		<combatPower>120</combatPower>
+		<combatPower>220</combatPower>
     <weaponMoney>2000~3500</weaponMoney>
 		<skills>
 			<li>
         <skill>Melee</skill>
-        <range>8~16</range>
+        <range>6~18</range>
       </li>
 		</skills>
 		<weaponTags>
@@ -117,7 +112,7 @@
 		<defName>GFMarauder</defName>
 		<label>Ancient Marauder</label>
 		<factionLeader>true</factionLeader>
-		<combatPower>160</combatPower>
+		<combatPower>250</combatPower>
 		<weaponMoney>3000~5000</weaponMoney>
 		<weaponTags>
       <li>SpacerGun</li>

@@ -117,7 +117,7 @@
 		<defName>GFAncientDestroyer</defName>
 		<label>Ancient destroyer</label>
 		<race>Race_GFAncientDestroyer</race>
-		<combatPower>300</combatPower>
+		<combatPower>320</combatPower>
 		<defaultFactionType>GFAncients</defaultFactionType>
 		<aiAvoidCover>true</aiAvoidCover>
 		<destroyGearOnDrop>true</destroyGearOnDrop>

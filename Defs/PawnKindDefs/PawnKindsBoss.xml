@@ -30,8 +30,9 @@
 				</li>
 			</subOptionsChooseOne>
 		</inventoryOptions>
-		<combatPower>400</combatPower>
+		<combatPower>450</combatPower>
 		<apparelMoney>9000~99999</apparelMoney>
+		<weaponMoney>9000~99999</weaponMoney>
 		<weaponTags>
       <li>SpacerGun</li>
 		</weaponTags>
@@ -67,5 +68,11 @@
         <GFAncientXenotype>999</GFAncientXenotype>
       </xenotypeChances>
     </xenotypeSet>
+		<skills>
+      <li>
+        <skill>Shooting</skill>
+        <range>4~16</range>
+      </li>
+    </skills>
 	</PawnKindDef>
 </Defs>
