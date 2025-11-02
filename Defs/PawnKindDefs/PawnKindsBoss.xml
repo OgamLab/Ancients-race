@@ -4,6 +4,7 @@
 		<defName>GFAncientBoss</defName>
 		<label>Ancient boss</label>
 		<race>Human</race>
+		<factionLeader>true</factionLeader>
 		<defaultFactionType>GFAncients</defaultFactionType>
 		<backstoryCryptosleepCommonality>0.4</backstoryCryptosleepCommonality>
 		<invNutrition>2.55</invNutrition>

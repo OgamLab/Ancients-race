@@ -4,14 +4,14 @@
 		<defName>GFAncients</defName>
     <label>hostile ancients</label>
     <permanentEnemy>true</permanentEnemy>
-    <pawnSingular>ancient</pawnSingular>
-    <pawnsPlural>ancients</pawnsPlural>
-    <categoryTag>Ancient</categoryTag>
+    <pawnSingular>angry ancient</pawnSingular>
+    <pawnsPlural>angry ancients</pawnsPlural>
+    <categoryTag>Angry ancient</categoryTag>
     <requiredCountAtGameStart>1</requiredCountAtGameStart>
     <maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
     <configurationListOrderPriority>2000</configurationListOrderPriority>
     <displayInFactionSelection>false</displayInFactionSelection>
-    <fixedName>Ancients</fixedName>
+    <fixedName>Angry Ancients</fixedName>
     <factionIconPath>World/Faction/GF_Ancient</factionIconPath>
     <techLevel>Ultra</techLevel>
     <backstoryFilters>
@@ -30,10 +30,9 @@
     </xenotypeSet>
     <hidden>true</hidden>
     <rescueesCanJoin>true</rescueesCanJoin>
+		<humanlikeFaction>true</humanlikeFaction>
     <autoFlee>false</autoFlee>
 		<raidsForbidden>false</raidsForbidden>
-    <hostileToFactionlessHumanlikes>true</hostileToFactionlessHumanlikes>
-    <humanlikeFaction>true</humanlikeFaction>
     <earliestRaidDays>60</earliestRaidDays>
 		<raidCommonalityFromPointsCurve>
       <points>

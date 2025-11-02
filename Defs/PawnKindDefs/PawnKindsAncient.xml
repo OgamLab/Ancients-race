@@ -111,7 +111,6 @@
 	<PawnKindDef ParentName="AncientPawnBase">
 		<defName>GFMarauder</defName>
 		<label>Ancient Marauder</label>
-		<factionLeader>true</factionLeader>
 		<combatPower>250</combatPower>
 		<weaponMoney>3000~5000</weaponMoney>
 		<weaponTags>
@@ -127,5 +126,11 @@
         <range>5~14</range>
       </li>
     </skills>
+		<xenotypeSet>
+      <xenotypeChances>
+				<GFAncientXenotype>0.85</GFAncientXenotype>
+        <Baseliner>0.15</Baseliner>
+      </xenotypeChances>
+    </xenotypeSet>
 	</PawnKindDef>
 </Defs>
