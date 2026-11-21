@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<PawnKindDef Name="AncientPawnBase" Abstract="True">
+		<race>Human</race>
+		<defaultFactionType>GFAncients</defaultFactionType>
+		<backstoryCryptosleepCommonality>0.4</backstoryCryptosleepCommonality>
+		<invNutrition>2.55</invNutrition>
+    <biocodeWeaponChance>1</biocodeWeaponChance>
+		<maxGenerationAge>55</maxGenerationAge>
+    <chemicalAddictionChance>0.1</chemicalAddictionChance>
+		<combatEnhancingDrugsChance>0.15</combatEnhancingDrugsChance>
+    <combatEnhancingDrugsCount>0~2</combatEnhancingDrugsCount>
+		<gearHealthRange>1~2.3</gearHealthRange>
+		<techHediffsChance>0.8</techHediffsChance>
+    <apparelColor>(90,98,113)</apparelColor>
+		<isFighter>true</isFighter>
+		<techHediffsRequired>
+      <li>DeathAcidifier</li>
+    </techHediffsRequired>
+		<disallowedTraits>
+      <li>Brawler</li>
+    </disallowedTraits>
+		<inventoryOptions>
+			<skipChance>0.4</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>Silver</thingDef>
+					<countRange>250~500</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+		<apparelMoney>7000~12000</apparelMoney>
+		<allowRoyalRoomRequirements>False</allowRoyalRoomRequirements>
+		<styleItemTags>
+      <li>
+        <tag>Soldier</tag>
+        <baseWeight>1</baseWeight>
+        <weightFactor>1</weightFactor>
+      </li>
+    </styleItemTags>
+		<apparelRequired>
+      <li>Apparel_ArmorHelmetCataphract</li>
+      <li>Apparel_ArmorCataphract</li>
+    </apparelRequired>
+		<specificApparelRequirements Inherit="False">
+      <li>
+        <bodyPartGroup>UpperHead</bodyPartGroup>
+        <alternateTagChoices>
+          <li>
+            <tag>Gunlink</tag>
+            <chance>0.2</chance>
+          </li>
+        </alternateTagChoices>
+      </li>
+      <li>
+        <bodyPartGroup>Torso</bodyPartGroup>
+        <apparelLayer>OnSkin</apparelLayer>
+        <stuff>Synthread</stuff>
+      </li>
+      <li>
+        <bodyPartGroup>Legs</bodyPartGroup>
+        <apparelLayer>OnSkin</apparelLayer>
+        <stuff>Synthread</stuff>
+      </li>
+    </specificApparelRequirements>
+		<initialWillRange>3</initialWillRange>
+		<initialResistanceRange>12~20</initialResistanceRange>
+		<requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+		<xenotypeSet>
+      <xenotypeChances>
+				<GFAncientXenotype>0.85</GFAncientXenotype>
+        <Baseliner>0.15</Baseliner>
+      </xenotypeChances>
+    </xenotypeSet>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="AncientPawnBase">
+		<defName>GFSoldier</defName>
+		<label>Ancient Soldier</label>
+		<combatPower>200</combatPower>
+    <weaponMoney>2500~4100</weaponMoney>
+		<weaponTags>
+      <li>SpacerGun</li>
+		</weaponTags>
+		<skills>
+      <li>
+        <skill>Shooting</skill>
+        <range>4~16</range>
+      </li>
+    </skills>
+		<disallowedTraits>
+      <li>Brawler</li>
+    </disallowedTraits>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="AncientPawnBase">
+		<defName>GFWarrior</defName>
+		<label>Ancient Warrior</label>
+		<combatPower>220</combatPower>
+    <weaponMoney>2000~3500</weaponMoney>
+		<skills>
+			<li>
+        <skill>Melee</skill>
+        <range>6~18</range>
+      </li>
+		</skills>
+		<weaponTags>
+      <li>Ultra</li>
+		</weaponTags>
+		<disallowedTraits>
+      <li>Brawler</li>
+    </disallowedTraits>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="AncientPawnBase">
+		<defName>GFMarauder</defName>
+		<label>Ancient Marauder</label>
+		<combatPower>250</combatPower>
+		<weaponMoney>3000~5000</weaponMoney>
+		<weaponTags>
+      <li>SpacerGun</li>
+		</weaponTags>
+		<skills>
+			<li>
+        <skill>Melee</skill>
+        <range>5~14</range>
+      </li>
+      <li>
+        <skill>Shooting</skill>
+        <range>5~14</range>
+      </li>
+    </skills>
+	</PawnKindDef>
+</Defs>

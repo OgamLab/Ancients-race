@@ -2,10 +2,17 @@
 <loadFolders>
   <v1.5>
     <li>/</li>
-    <li IfModActive="RavenousEye.AncientEquipment">Patches/AncientEquipment</li>
+		<li>1.5</li>
+    <li IfModActive="RavenousEye.AncientEquipment">1.5/Patches/AncientEquipment</li>
   </v1.5>
 	<v1.6>
     <li>/</li>
-    <li IfModActive="RavenousEye.AncientEquipment">Patches/AncientEquipment</li>
+		<li>1.6</li>
+    <li IfModActive="RavenousEye.AncientEquipment">1.6/Patches/AncientEquipment</li>
   </v1.6>
+	<v1.7>
+    <li>/</li>
+		<li>1.7</li>
+    <li IfModActive="RavenousEye.AncientEquipment">1.7/Patches/AncientEquipment</li>
+  </v1.7>
 </loadFolders>

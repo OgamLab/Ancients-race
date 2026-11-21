@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/PawnKindDef[defName="GFAncientBoss"]</xpath>
+		<value>
+			<weaponTags>
+				<li>REAWArcThrower</li>
+			</weaponTags>
+			<apparelTags>
+				<li>REAWArmor</li>
+			</apparelTags>
+			<specificApparelRequirements>
+				<li>
+					<bodyPartGroup>FullHead</bodyPartGroup>
+					<requiredTag>REAWArmor</requiredTag>
+				</li>
+				<li>
+					<bodyPartGroup>Torso</bodyPartGroup>
+				</li>
+			</specificApparelRequirements>
+		</value>
+	</Operation>
+</Patch>
